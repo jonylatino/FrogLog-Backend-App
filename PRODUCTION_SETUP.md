@@ -3,7 +3,7 @@
 When deploying to DigitalOcean (or any production environment), you must configure the following Environment Variables in the App Platform dashboard.
 
 ## Domain Configuration
-These are critical for your new domains (`froglogbook.com` and `core.froglogbook.com`).
+These are critical for your new domains (`froglogbook.com` and `froglogbackend-wdv64.ondigitalocean.app`).
 
 | Variable | Value | Description |
 |----------|-------|-------------|
@@ -37,10 +37,10 @@ Ensure these are set to your **Live/Production** keys, not Test keys.
 1. **Google Cloud Console:** Go to [APIs & Services > Credentials](https://console.cloud.google.com/apis/credentials).
    - Edit your OAuth 2.0 Client ID.
    - Add `https://froglogbook.com` to **Authorized JavaScript origins**.
-   - Add `https://froglogbook.com` (and potentially `https://core.froglogbook.com/api/auth/google/callback` if used) to **Authorized redirect URIs**.
+   - Add `https://froglogbook.com` (and potentially `https://froglogbackend-wdv64.ondigitalocean.app/api/auth/google/callback` if used) to **Authorized redirect URIs**.
 
 2. **Stripe Dashboard:**
-   - Create a new Webhook Endpoint pointing to `https://core.froglogbook.com/api/webhooks`.
+   - Create a new Webhook Endpoint pointing to `https://froglogbackend-wdv64.ondigitalocean.app/api/webhooks`.
    - Use the signing secret from this new endpoint for `STRIPE_WEBHOOK_SECRET`.
 
 3. **CORS:**
