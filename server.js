@@ -76,6 +76,8 @@ const corsOptions = {
       "https://localhost:3001",
       "capacitor://localhost",
       "http://localhost",
+      "https://froglogbook.com",
+      "https://www.froglogbook.com",
       process.env.FRONTEND_URL,
       process.env.PRODUCTION_URL,
     ].filter(Boolean);
